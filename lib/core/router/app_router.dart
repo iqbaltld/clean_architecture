@@ -8,7 +8,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       case HomeScreen.name:
-      // final args = routeSettings.arguments as Map<String, dynamic>;
+        // final args = routeSettings.arguments as Map<String, dynamic>;
         return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       default:

@@ -69,4 +69,6 @@ fvm flutter pub run build_runner build --delete-conflicting-outputs
 ---
 
 
-Happy coding! 💙
+## 📣 Author
+
+**Muhammed Iqbal** – [LinkedIn](https://linkedin.com/in/iqbaltld)

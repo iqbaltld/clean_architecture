@@ -1,16 +1,16 @@
 import 'package:clean_architecture/core/errors/failure.dart';
-import 'package:clean_architecture/features/home/domain/entities/product.dart';
+import 'package:clean_architecture/features/home/domain/entities/recipe.dart';
 import 'package:clean_architecture/features/home/domain/repositories/home_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
-class GetProductsUseCase {
+class GetRecipeUseCase {
   final HomeRepository repository;
 
-  GetProductsUseCase(this.repository);
+  GetRecipeUseCase(this.repository);
 
-  Future<Either<Failure, List<Product>>> call() async {
-    return await repository.getProducts();
+  Future<Either<Failure, List<Recipe>>> call() async {
+    return await repository.getRecipes();
   }
 }

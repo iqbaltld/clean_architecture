@@ -2,7 +2,7 @@
 import 'package:clean_architecture/core/errors/exception.dart';
 import 'package:clean_architecture/core/errors/failure.dart';
 import 'package:clean_architecture/features/home/data/datasources/home_data_source.dart';
-import 'package:clean_architecture/features/home/domain/entities/product.dart';
+import 'package:clean_architecture/features/home/domain/entities/recipe.dart';
 import 'package:clean_architecture/features/home/domain/repositories/home_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
@@ -15,9 +15,9 @@ class HomeRepositoryImpl implements HomeRepository {
   });
 
   @override
-  Future<Either<Failure, List<Product>>> getProducts() async {
+  Future<Either<Failure, List<Recipe>>> getRecipes() async {
     try {
-      final result = await dataSource.getProducts();
+      final result = await dataSource.getRecipes();
       return Right(result.map((element) => element.toEntity()).toList());
     } on ServerException catch (e) {
       return Left(ServerFailure(e.message, statusCode: e.statusCode));

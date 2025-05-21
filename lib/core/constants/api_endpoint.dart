@@ -1,3 +1,3 @@
 class ApiEndpoint {
-  static const String getProducts = 'products';
+  static const String getRecipes = 'recipes';
 }

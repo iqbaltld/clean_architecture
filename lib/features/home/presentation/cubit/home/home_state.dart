@@ -12,10 +12,10 @@ final class HomeInitial extends HomeState {}
 final class HomeLoading extends HomeState {}
 
 final class HomeLoaded extends HomeState {
-  final List<Product> products;
-  const HomeLoaded(this.products);
+  final List<Recipe> recipes;
+  const HomeLoaded(this.recipes);
   @override
-  List<Object> get props => [products];
+  List<Object> get props => [recipes];
 }
 
 final class HomeError extends HomeState {

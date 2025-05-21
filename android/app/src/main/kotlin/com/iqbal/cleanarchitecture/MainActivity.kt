@@ -1,4 +1,4 @@
-package com.iqbal.clean_architecture
+package com.iqbal.cleanarchitecture
 
 import io.flutter.embedding.android.FlutterActivity
 

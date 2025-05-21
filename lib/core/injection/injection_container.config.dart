@@ -18,8 +18,8 @@ import 'package:clean_architecture/features/home/data/repositories/home_reposito
     as _i760;
 import 'package:clean_architecture/features/home/domain/repositories/home_repository.dart'
     as _i1;
-import 'package:clean_architecture/features/home/domain/use_cases/get_products_use_case.dart'
-    as _i910;
+import 'package:clean_architecture/features/home/domain/use_cases/get_recipe_use_case.dart'
+    as _i1032;
 import 'package:clean_architecture/features/home/presentation/cubit/cart/cart_cubit.dart'
     as _i489;
 import 'package:clean_architecture/features/home/presentation/cubit/home/home_cubit.dart'
@@ -51,10 +51,10 @@ extension GetItInjectableX on _i174.GetIt {
         ));
     gh.factory<_i1.HomeRepository>(
         () => _i760.HomeRepositoryImpl(dataSource: gh<_i821.HomeDataSource>()));
-    gh.factory<_i910.GetProductsUseCase>(
-        () => _i910.GetProductsUseCase(gh<_i1.HomeRepository>()));
+    gh.factory<_i1032.GetRecipeUseCase>(
+        () => _i1032.GetRecipeUseCase(gh<_i1.HomeRepository>()));
     gh.factory<_i422.HomeCubit>(
-        () => _i422.HomeCubit(gh<_i910.GetProductsUseCase>()));
+        () => _i422.HomeCubit(gh<_i1032.GetRecipeUseCase>()));
     return this;
   }
 }

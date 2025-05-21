@@ -17,7 +17,7 @@ class CustomInterceptor extends Interceptor {
 
   /// list of endpoints that need to be skipped because we don't want a token to be sent
   final _apisToSkipToken = [
-    ApiEndpoint.getProducts,
+    ApiEndpoint.getRecipes,
   ];
 
   @override

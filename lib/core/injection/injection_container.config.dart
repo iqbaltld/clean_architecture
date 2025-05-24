@@ -20,8 +20,6 @@ import 'package:clean_architecture/features/home/domain/repositories/home_reposi
     as _i1;
 import 'package:clean_architecture/features/home/domain/use_cases/get_recipe_use_case.dart'
     as _i1032;
-import 'package:clean_architecture/features/home/presentation/cubit/cart/cart_cubit.dart'
-    as _i489;
 import 'package:clean_architecture/features/home/presentation/cubit/home/home_cubit.dart'
     as _i422;
 import 'package:dio/dio.dart' as _i361;
@@ -40,7 +38,6 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i489.CartCubit>(() => _i489.CartCubit());
     gh.factory<_i361.Interceptor>(() => _i786.CustomInterceptor(
           gh<_i361.Dio>(),
           gh<_i788.NavigationService>(),

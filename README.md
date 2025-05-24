@@ -8,7 +8,7 @@ A scalable, modular, and easy-to-use clean architecture template for Flutter app
 
 ### 1. Create a New Project
 ```bash
-flutter create --org com.iqbal clean_architecture
+flutter create --org com.example clean_architecture
 cd clean_architecture
 code .
 ```

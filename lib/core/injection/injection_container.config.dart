@@ -20,7 +20,7 @@ import 'package:clean_architecture/features/home/domain/repositories/home_reposi
     as _i1;
 import 'package:clean_architecture/features/home/domain/use_cases/get_recipe_use_case.dart'
     as _i1032;
-import 'package:clean_architecture/features/home/presentation/cubit/home/home_cubit.dart'
+import 'package:clean_architecture/features/home/presentation/cubit/home_cubit.dart'
     as _i422;
 import 'package:dio/dio.dart' as _i361;
 import 'package:get_it/get_it.dart' as _i174;

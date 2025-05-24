@@ -1,5 +1,5 @@
 import 'package:clean_architecture/core/widgets/custom_progress_indicator.dart';
-import 'package:clean_architecture/features/home/presentation/cubit/home/home_cubit.dart';
+import 'package:clean_architecture/features/home/presentation/cubit/home_cubit.dart';
 import 'package:clean_architecture/features/home/presentation/screens/widgets/recipe_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

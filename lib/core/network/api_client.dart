@@ -22,7 +22,6 @@ class ApiClientImpl implements ApiClient {
   @override
   Future<T> getRequest<T>(
     String url, {
-    bool isFile = false,
     Map<String, dynamic>? queryParams,
     Options? options,
     T Function(dynamic data)? fromJson,
@@ -31,10 +30,7 @@ class ApiClientImpl implements ApiClient {
       final response = await dio.get(
         url,
         queryParameters: queryParams,
-        options: isFile
-            ? options?.copyWith(responseType: ResponseType.bytes) ??
-                Options(responseType: ResponseType.bytes)
-            : options,
+        options: options,
       );
       return _handleResponse<T>(response, fromJson: fromJson);
     } on DioException catch (e) {
@@ -47,7 +43,6 @@ class ApiClientImpl implements ApiClient {
   @override
   Future<T> postRequest<T>(
     String url, {
-    bool isFile = false,
     Map<String, dynamic>? queryParams,
     dynamic data,
     Options? options,
@@ -58,10 +53,7 @@ class ApiClientImpl implements ApiClient {
         url,
         data: data,
         queryParameters: queryParams,
-        options: isFile
-            ? options?.copyWith(responseType: ResponseType.bytes) ??
-                Options(responseType: ResponseType.bytes)
-            : options,
+        options: options,
       );
       return _handleResponse<T>(response, fromJson: fromJson);
     } on DioException catch (e) {
